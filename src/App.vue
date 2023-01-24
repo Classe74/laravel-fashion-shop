@@ -1,20 +1,20 @@
 <template>
-  <h1>{{ title }}</h1>
+  <AppHeader></AppHeader>
+  <main class="container">
+    <router-view></router-view>
+  </main>
+  
 </template>
-
 <script>
-import axios from 'axios';
+import AppHeader from './components/HeaderComponent.vue';
   export default {
     name: 'App',
-    data() {
-        return {
-            title: 'Hello Vue',
-        }
-    },
+    components:{
+      AppHeader
+    }
     
   }
 </script>
 
 <style lang="scss" scoped>
-
 </style>

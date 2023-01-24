@@ -1,22 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import {reactive} from 'vue';
 
-import AppHome from './pages/AppHome.vue';
-import ProductList from './pages/ProductList.vue';
-
-const router = createRouter({
-    history: createWebHistory(),
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: AppHome
-        },
-        {
-            path: '/products',
-            name: 'products',
-            component: ProductList
-        },
-    ]
+export const store = reactive({
+    apiBaseUrl: 'http://127.0.0.1:8000/api',
+    imagBasePath: 'http://127.0.0.1:8000/storage/'
 });
-
-export { router };
